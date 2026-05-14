@@ -1,0 +1,25 @@
+{
+  "name": "aplicativo_web",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatlynCristine6/Projeto-01--Sal-o-de-Beleza.git"
+  },
+  "author": "Katlyn Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KatlynCristine6/Projeto-01--Sal-o-de-Beleza/issues"
+  },
+  "homepage": "https://github.com/KatlynCristine6/Projeto-01--Sal-o-de-Beleza#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3",
+    "sequelize": "^6.37.8"
+  }
+}
