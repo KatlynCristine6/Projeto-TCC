@@ -2,28 +2,31 @@
 const express = require('express')
 const router = require('./mvc/routes/config')
 
-class Server
-{
+class Server {
 
-    app 
+    app
     port
 
-    constructor(port)
-    {
+    constructor(port) {
+
         this.app = express()
         this.port = port
+
+        this.app.use(express.json())
+        this.app.use(express.urlencoded({ extended: true }))
+
         this.app.use(router)
+
         this.app.set("view engine", "ejs")
-        this.app.set("views","mvc/views")
+        this.app.set("views", "mvc/views")
     }
 
-    listen()
-    {
+    listen() {
+
         this.app.listen(this.port, () => {
-            console.log("Servidor Online...")
+            console.log(`Servidor Online na porta ${this.port}`)
         })
     }
-
 }
 
-module.exports = new Server(3000)
+module.exports = new Server(8080)
